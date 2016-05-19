@@ -1,0 +1,70 @@
+// espace-adherents.scss
+
+.espaceAdherents{
+	header{
+		padding:20px 0 0;
+	}
+
+	h1{
+		color:$lightgrey;
+		font-weight:bold;
+		text-transform:uppercase;
+		text-align:right;
+		margin:20px 20px 0;
+		border-bottom:1px solid $lightgrey;
+		padding-bottom:0;
+		line-height: 0.8;
+	    font-size: 4.4em;
+	}
+	.btn{
+		display: block;
+		background-color: $darkblue;
+		float: right;
+		color: #fff;
+		padding: 5px 15px;
+		text-decoration: none;
+		margin-top: 0;
+		&:hover{
+			background-color: $darkbluehover;
+		}
+	}
+
+	.pageContent{
+		margin-top: 10px;
+	}
+	.col3--espaceAdherents{
+		.col{
+			width: calc(100% / 3);
+			float: left;
+			.blc{
+				display: block;
+				width: 100%;
+				float: left;
+				padding: 1em;
+				&:nth-child(odd){
+					background-color:#f1f1f1;
+				}
+				h2{
+					margin-top:15px;
+					margin-bottom:10px;
+					margin-left: 10px;
+					font-size:2.6rem;
+					line-height: 2.8rem;
+				}
+				h3{
+					font-size:2rem;
+				}
+			}
+			&:nth-child(2){
+				.blc{
+					&:nth-child(odd){
+						background-color:#ffffff;
+					}
+					&:nth-child(even){
+						background-color:#f1f1f1;
+					}
+				}
+			}
+		}
+	}
+}

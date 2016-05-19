@@ -1,0 +1,25 @@
+{
+  "name": "A3M",
+  "version": "0.1.0",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-ignore": "^2.0.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-modernizr": "0.0.0",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "jquery": "^2.1.4",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.1.0",
+    "main-bower-files": "^2.9.0"
+  }
+}

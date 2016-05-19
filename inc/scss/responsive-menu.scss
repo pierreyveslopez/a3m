@@ -1,0 +1,16 @@
+// responsive-menu.scss
+
+/*** NAVIGATION ***/
+
+.pure-menu-horizontal{
+	white-space: normal;
+	.pure-menu-list{
+	}
+}
+
+@media screen and (max-width: 770px) {
+ 	header nav#mainNavigation ul>li{
+	 	display: block;
+	 	border-right: 0px;
+ 	}
+}

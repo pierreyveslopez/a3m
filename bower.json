@@ -1,0 +1,37 @@
+{
+  "name": "A3M",
+  "description": "A3M website",
+  "main": "index.php",
+  "moduleType": [],
+  "authors": [
+    "Mona MODI <mona@red-cranberry.com>"
+  ],
+  "license": "Tous droits réservés",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-2.1.0.min": "http://code.jquery.com/jquery-2.1.0.min.js",
+    "pure": "~0.6.0",
+    "hover": "Hover#~2.0.2",
+    "animate.css": "~3.4.0",
+    "Chart.js": "~1.0.2",
+    "select2": "~4.0.1",
+    "slick-carousel": "~1.5.9",
+    "respond": "~1.4.2",
+    "components-font-awesome": "~4.5.0",
+    "chartist": "^0.9.7"
+  },
+  "install": {
+    "path": {
+      "js": "js/",
+      "css": "css/"
+    }
+  }
+}

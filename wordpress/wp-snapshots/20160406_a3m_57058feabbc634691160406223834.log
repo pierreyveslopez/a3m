@@ -1,0 +1,75 @@
+********************************************************************************
+PACKAGE-LOG: 2016-04-06 22:38:57
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.1.6
+WORDPRESS:	4.4.2
+PHP INFO:	5.6.2 | SAPI: apache2handler
+SERVER:		Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8zg DAV/2 mod_perl/2.0.8 Perl/v5.20.0 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 5000M (128M default) 
+MEMORY STACK: 26.25MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Not Supported 
+TABLES: total:13 | filtered:0 | create:13 
+FILTERED: [] 
+SQL CREATED: 20160406_a3m_57058feabbc634691160406223834_database.sql 
+SQL FILE SIZE: 508KB (520196) 
+SQL FILE TIME: 2016-04-06 22:38:57 
+SQL RUNTIME: 0.13 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /Users/py/Sites/a3m/wordpress 
+ARCHIVE FILE: 20160406_a3m_57058feabbc634691160406223834_archive.zip 
+FILTERS: *OFF* 
+DIRS:  not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	32.05MB 
+STATS:	Dirs 181 | Files 1,688 
+SQL ADDED: 20160406_a3m_57058feabbc634691160406223834_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 1869
+    [filename] => /Users/py/Sites/a3m/wordpress/wp-snapshots/tmp/20160406_a3m_57058feabbc634691160406223834_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 13.55MB 
+ARCHIVE RUNTIME: 6.62 sec. 
+MEMORY STACK: 27.5MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+Template parsed with new data 
+Complete [/Users/py/Sites/a3m/wordpress/wp-snapshots/tmp/20160406_a3m_57058feabbc634691160406223834_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 508KB 
+Installer File: 319.34KB 
+Archive File: 13.55MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 7.09 sec.
+PEAK PHP MEMORY USED: 29.75MB
+DONE PROCESSING => 20160406_a3m 2016-04-06 22:39:04
+ 

@@ -1,0 +1,124 @@
+// page-color.scss
+
+.bluePage{
+	.sidebar{
+		.submenu{
+			background-color: $darkblue;
+			ul li:hover, ul li.actif{
+				background-color: $darkbluehover;
+			}
+		}
+	}
+	.pageContent{
+		.titlePAge{
+			color: $darkblue;
+			&.twoline{
+		    	.subtitle{
+		    		color: $darkblue;
+		    	}
+		    }
+		}
+	}
+	strong {color:$darkblue;}	
+}
+.blueLightPage{
+	.sidebar{
+		.submenu{
+			background-color: $lightblue;
+			ul li a:hover, ul li.actif{
+				background-color:$lightbluehover;
+			}
+		}
+	}
+	.pageContent{
+		.titlePAge{
+			color: $lightblue;
+			&.twoline{
+		    	.subtitle{
+		    		color: $lightblue;
+		    	}
+		    }
+		}
+	}
+	strong {color:$lightblue;}	
+}
+.greenPage{
+	.sidebar{
+		.submenu{
+			background-color: $green;
+			ul li a:hover, ul li.actif{
+				background-color:$greenhover;
+			}
+		}
+	}
+	.pageContent{
+		.titlePAge{
+			color: $green;
+			&.twoline{
+		    	.subtitle{
+		    		color: $green;
+		    	}
+		    }
+		    &::before{
+				background-position: -72px -38px;
+			}
+		}
+	}
+
+	strong {color:$green;}	
+}
+.yellowPage{
+	.sidebar{
+		.submenu{
+			background-color: $yellow;
+			ul li:hover, ul li.actif{
+				background-color:$yellowhover;
+			}
+		}
+	}
+	.pageContent{
+		.titlePAge{
+			color: $yellow;
+			&.twoline{
+		    	.subtitle{
+		    		color: $yellow;
+		    	}
+		    }
+		}
+	}
+	.select--custom{
+		&:after{
+			background-color: $yellow;
+		}
+	}
+	strong {color:$yellow;}	
+	.titlePAge{
+		&::before{
+			background-position: -145px -38px;
+		}
+	}	
+}
+.purplePage{
+	.sidebar{
+		.submenu{
+			background-color: $purple;
+			ul li a:hover, ul li.actif{
+				background-color:$purplehover;
+			}
+		}
+	}
+	.pageContent{
+		.titlePAge{
+			color: $purple;
+			&.twoline{
+		    	.subtitle{
+		    		color: $purple;
+		    	}
+		    }
+		    &::before{
+				background-position: -218px -38px;
+			}
+		}
+	}
+	strong {color:$purple;}		
+}
