@@ -33,7 +33,7 @@
 			<div class="hp-actu">
 				<h2 class="angle">Actu <br/>& Évenements</h2>
         <?php 
-          query_posts( 'posts_per_page=3' );
+          query_posts( 'posts_per_page=3&category_name=actu_events' );
           while ( have_posts() ) : the_post();          
         ?>
         <article>

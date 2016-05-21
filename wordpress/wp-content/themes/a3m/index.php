@@ -44,7 +44,7 @@
         <div class="pure-u-1 pure-u-md-1-3 l-box hp-actu">
           <h2 class="angle">Actu <br/>& Évenements</h2>
           <?php 
-            query_posts( 'posts_per_page=3' );
+            query_posts( 'posts_per_page=3&category_name=actu_events' );
             while ( have_posts() ) : the_post();          
           ?>
           <article>
