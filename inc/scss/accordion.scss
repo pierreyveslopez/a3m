@@ -24,6 +24,18 @@
     color:$lightblue;
     text-transform: uppercase;
     text-decoration: none;
+    cursor:pointer;
+    position: relative;
+    &:after{
+        content:'\02795';
+        position: absolute;
+        right:1rem;
+    }
+    &.active:after{
+        content:'\2796';
+        position: absolute;
+        right:1rem;
+    }
 }
  
 .accordion-section-title:hover {

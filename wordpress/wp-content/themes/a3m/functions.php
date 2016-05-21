@@ -153,4 +153,70 @@ function private_page() {
     }
 }
 
+register_taxonomy(
+	'type',   
+	'adherents',   
+	array(     
+		'label' => 'Types',     
+		'labels' => array(     
+			'name' => 'Types',     
+			'singular_name' => 'Type',     
+			'all_items' => 'Tous les types',     
+			'edit_item' => 'Éditer le type',     
+			'view_item' => 'Voir le type',     
+			'update_item' => 'Mettre à jour le type',     
+			'add_new_item' => 'Ajouter un type',     
+			'new_item_name' => 'Nouveau type',     
+			'search_items' => 'Rechercher parmi les types',     
+			'popular_items' => 'Types les plus utilisés'   
+			),   
+		'hierarchical' => true   
+		)
+);
+
+register_taxonomy(
+	'matieres',   
+	'adherents',   
+	array(     
+		'label' => 'Matières',     
+		'labels' => array(     
+			'name' => 'Matières',     
+			'singular_name' => 'Matière',     
+			'all_items' => 'Toutes les matières',     
+			'edit_item' => 'Éditer la matière',     
+			'view_item' => 'Voir la matière',     
+			'update_item' => 'Mettre à jour la matière',     
+			'add_new_item' => 'Ajouter une matière',     
+			'new_item_name' => 'Nouvelle matière',     
+			'search_items' => 'Rechercher parmi les matières',     
+			'popular_items' => 'Matières les plus utilisés'   
+			),   
+		'hierarchical' => true   
+		)
+); 
+
+register_taxonomy(
+	'produit',   
+	'adherents',   
+	array(     
+		'label' => 'Produits',     
+		'labels' => array(     
+			'name' => 'Produits',     
+			'singular_name' => 'Produit',    
+			'all_items' => 'Tous les produits',     
+			'edit_item' => 'Éditer le produit',     
+			'view_item' => 'Voir le produit',     
+			'update_item' => 'Mettre à jour le produit',     
+			'add_new_item' => 'Ajouter un produit',     
+			'new_item_name' => 'Nouveau produit',     
+			'search_items' => 'Rechercher parmi les produits',     
+			'popular_items' => 'Produits les plus utilisées'   
+			),   
+		'hierarchical' => false   
+		) 
+); 
+register_taxonomy_for_object_type( 'type', 'adherents' );
+register_taxonomy_for_object_type( 'matieres', 'adherents' );
+register_taxonomy_for_object_type( 'produit', 'adherents' );
+
 

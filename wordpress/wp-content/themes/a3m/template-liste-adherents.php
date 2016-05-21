@@ -8,7 +8,21 @@
     <?php custom_breadcrumbs($post); ?>
     <?php get_sidebar();?>
     <?php 
-        query_posts('post_type=adherents&orderby=title&order=ASC&category_name=entreprises');
+        query_posts(
+          array(
+            'post_type' => 'adherents',
+            'showposts' => -1,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'type',
+                'terms' => 'entreprises',
+                'field' => 'name'
+              )
+            ),
+            'orderby' => 'title',
+            'order' => 'ASC'
+          )
+        );
         $countAdherents = 0; 
         while ( have_posts() ) : the_post();
           $countAdherents++;
@@ -20,7 +34,21 @@
             $endCol1 = ceil($endCol1);
             $startCol2 = floor($startCol2);
           }
-        query_posts('post_type=adherents&orderby=title&order=ASC&category_name=organismes');
+        query_posts(
+          array(
+            'post_type' => 'adherents',
+            'showposts' => -1,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'type',
+                'terms' => 'organismes',
+                'field' => 'name'
+              )
+            ),
+            'orderby' => 'title',
+            'order' => 'ASC'
+          )
+        );
         $countOrganismes = 0; 
         while ( have_posts() ) : the_post();
           $countOrganismes++;
@@ -40,8 +68,22 @@
             <div class="hp2col listeAdherents">
             <div class="col">
               <ul>
-                <?php 
-                  query_posts('post_type=adherents&orderby=title&order=ASC&category_name=entreprises&posts_per_page='.$endCol1);
+                <?php
+                  query_posts(
+                    array(
+                      'post_type' => 'adherents',
+                      'tax_query' => array(
+                        array(
+                          'taxonomy' => 'type',
+                          'terms' => 'entreprises',
+                          'field' => 'name'
+                        )
+                      ),
+                      'orderby' => 'title',
+                      'order' => 'ASC',
+                      'posts_per_page' => $endCol1
+                    )
+                  ); 
                   while ( have_posts() ) : the_post();
                 ?>
                   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -50,8 +92,22 @@
             </div>
             <div class="col">
               <ul>
-                <?php 
-                  query_posts('post_type=adherents&orderby=title&order=ASC&category_name=entreprises&offset='.$endCol1);
+                <?php
+                  query_posts(
+                    array(
+                      'post_type' => 'adherents',
+                      'tax_query' => array(
+                        array(
+                          'taxonomy' => 'type',
+                          'terms' => 'entreprises',
+                          'field' => 'name'
+                        )
+                      ),
+                      'orderby' => 'title',
+                      'order' => 'ASC',
+                      'offset' => $endCol1
+                    )
+                  ); 
                   while ( have_posts() ) : the_post();
                 ?>
                   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -63,8 +119,22 @@
           <div class="hp2col listeAdherents organismes">
             <div class="col">
               <ul>
-                <?php 
-                  query_posts('post_type=adherents&orderby=title&order=ASC&category_name=organismes&posts_per_page='.$endColOrganismes1);
+                <?php
+                  query_posts(
+                    array(
+                      'post_type' => 'adherents',
+                      'tax_query' => array(
+                        array(
+                          'taxonomy' => 'type',
+                          'terms' => 'organismes',
+                          'field' => 'name'
+                        )
+                      ),
+                      'orderby' => 'title',
+                      'order' => 'ASC',
+                      'posts_per_page' => $endColOrganismes1
+                    )
+                  );  
                   while ( have_posts() ) : the_post();
                 ?>
                   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -73,8 +143,22 @@
             </div>
             <div class="col">
               <ul>
-                <?php 
-                  query_posts('post_type=adherents&orderby=title&order=ASC&category_name=organismes&offset='.$endColOrganismes1);
+                <?php
+                  query_posts(
+                    array(
+                      'post_type' => 'adherents',
+                      'tax_query' => array(
+                        array(
+                          'taxonomy' => 'type',
+                          'terms' => 'organismes',
+                          'field' => 'name'
+                        )
+                      ),
+                      'orderby' => 'title',
+                      'order' => 'ASC',
+                      'offset' => $endColOrganismes1
+                    )
+                  ); 
                   if($countOrganismes>1){
                   while ( have_posts() ) : the_post();
                 ?>

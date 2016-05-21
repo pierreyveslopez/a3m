@@ -656,6 +656,62 @@ header{
 			box-sizing:border-box;
 		}
 	}
+	&.singleAdherent{
+		.headerInformations{
+			font-size:2rem;
+			font-weight: 300;
+			margin-bottom:1rem;
+			strong {
+				font-weight: 500;
+				color:$grey;
+			}
+			.ca{
+				background-image:url('../img/sp-fiche-adherent.png');
+				background-repeat:no-repeat;
+				padding-left:30px;
+				margin-right:1.5rem;
+
+			}
+			.effectif{
+				background-image:url('../img/sp-fiche-adherent.png');
+				background-position: 0 -50px;
+				background-repeat:no-repeat;
+				padding-left:30px;
+			}
+		}
+		#matieres, #produits {
+			ul{
+				display:inline-block;
+				width:100%;
+				padding-left:0;
+				li{
+					width:25%;
+					min-width:13rem;
+					float:left;
+					box-sizing: border-box;
+    				padding-right: 3rem;
+				}
+			}
+		}
+		#outils {
+			ul{
+				display:inline-block;
+				width:100%;
+				padding-left:0;
+				li{
+					float:left;
+    				padding-right: 3rem;
+    				padding-left: 3rem;
+    				background-image:url('../img/sp-fiche-adherent.png');
+					background-position: 0 -100px;
+					background-repeat:no-repeat;
+					min-height: 3rem;
+    				line-height: 3rem;
+				    list-style: none;
+				}
+			}
+		}
+	}
 }
 
 .articlesRelatifs{
