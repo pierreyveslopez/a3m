@@ -112,6 +112,8 @@ ul{
 	    background-repeat: no-repeat;
 	    background-position: center center;
 	    cursor: pointer;
+	        pointer-events: none;
+	        z-index: 1000;
 	}
 }
 
@@ -655,6 +657,38 @@ header{
 			padding-right:15px;
 			box-sizing:border-box;
 		}
+	}
+	.producteurs_produits{
+		margin-top: 1.5rem;
+		ul {
+			padding-left: 0;
+			margin-top: 0;
+			-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		    -moz-column-count: 2; /* Firefox */
+		    column-count: 2;
+			li.show{
+			    display: inline-block;
+			    width: 100%;
+				list-style: none;
+				font-size:1.3em;
+				color: $yellow;
+				padding: 5px;
+				text-transform: uppercase;
+				border-bottom:1px solid #ccc;
+				a{
+					color: $grey;
+					font-weight: 600;
+					font-size:1.4rem;
+					text-decoration: none;
+					&:hover{
+						color:$yellow;
+					}
+				}
+				&:nth-child(even){
+					background-color:#e6e6e6;
+				}
+			}
+		}		
 	}
 	&.singleAdherent{
 		.headerInformations{

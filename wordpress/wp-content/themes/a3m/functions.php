@@ -212,7 +212,7 @@ register_taxonomy(
 			'search_items' => 'Rechercher parmi les produits',     
 			'popular_items' => 'Produits les plus utilisées'   
 			),   
-		'hierarchical' => false   
+		'hierarchical' => true   
 		) 
 ); 
 register_taxonomy_for_object_type( 'type', 'adherents' );

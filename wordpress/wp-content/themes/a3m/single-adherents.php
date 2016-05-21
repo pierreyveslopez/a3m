@@ -60,7 +60,7 @@
                 <div id="matieres" class="accordion-section-content">
                     <ul>
                          <?php
-                            $matieres = get_terms( 'matieres', '' );
+                            $matieres = wp_get_post_terms($post->ID, 'matieres', '' );
                             foreach ( $matieres as $matiere ) {
                                 echo '<li>' . $matiere->name . '</li>';
                             }
@@ -74,7 +74,7 @@
                 <div id="produits" class="accordion-section-content">
                     <ul>           
                        <?php
-                            $produits = get_terms( 'produit', '' );
+                            $produits = wp_get_post_terms($post->ID, 'produit', '' );
                             foreach ( $produits as $produit ) {
                                 echo '<li>' . $produit->name . '</li>';
                             }
