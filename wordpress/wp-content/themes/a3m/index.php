@@ -22,12 +22,19 @@
 
         <div class="pure-u-1 pure-u-md-1-3 l-box">
           <article>
-            <h2 class="angle">A3M</h2>
-            <h3>A3M est l'alliance des minerais, minéraux et métaux</h3>
-            <p class="bolder">
-              L'alliance des Minerais, Minéraux et Métaux (A3M) résulte d'une alliance entre la <a href="#" class="txt-coloured">FEDEM</a> (Fédération des minerais, minéraux industriels et métaux non ferreux) et la <a href="#" class="txt-coloured">FFA</a> (Fédération Francaise de l'Acier) qui ont décidé d'unir leurs forces pour assurer une meilleure visibilité et représentativité de leurs professions.
-            </p>
-            <a href="#" class="default">Lire la suite --></a>
+            <?php 
+              $the_query = new WP_Query( array( 'page_id' => 20 )  );
+              while ( $the_query->have_posts() ) : $the_query->the_post();
+              $parent_title = get_the_title($post->post_parent);
+            ?>
+              <h2 class="angle"><?php echo $parent_title; ?></h2>
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>" class="default">Lire la suite --></a>
+
+            <?php
+              endwhile; wp_reset_query();
+            ?>
+            
           </article>
           <hr>
           <article>

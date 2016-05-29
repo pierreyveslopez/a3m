@@ -138,6 +138,12 @@ function custom_breadcrumbs($queryPost) {
     echo $breadcrumb;
 }
 
+//Ajouter un champ extrait aux pages
+function wpcodex_add_excerpt_support_for_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+
 // Vérouiller l'accès à une page
 add_action( 'template_redirect', 'private_page' );
 function private_page() {
