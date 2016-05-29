@@ -7,3 +7,21 @@ Author URI: http://www.fourtysevenstudio.com
 Version: 1.0
 Tags: modern, light, adaptive, responsive
 */
+div.wpcf7#wpcf7-f233-p18-o1,
+div.wpcf7#wpcf7-f233-p18-o1 input,
+div.wpcf7#wpcf7-f233-p18-o1 select,
+div.wpcf7#wpcf7-f233-p18-o1 textarea{
+	font-size: 1.5rem;
+}
+
+
+div.wpcf7#wpcf7-f233-p18-o1 input[type="text"],
+div.wpcf7#wpcf7-f233-p18-o1 input[type="email"],
+div.wpcf7#wpcf7-f233-p18-o1 select,
+div.wpcf7#wpcf7-f233-p18-o1 textarea{
+	width: 100%;
+}
+
+div.wpcf7#wpcf7-f233-p18-o1 input[type="submit"]{
+	margin: 0 auto;
+}

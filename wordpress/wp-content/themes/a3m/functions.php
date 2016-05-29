@@ -9,6 +9,7 @@ add_theme_support( 'menus' );
 function theme_styles(){
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css' );
 	wp_enqueue_style( 'mystyle', get_template_directory_uri() . '/css/style.min.css' );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
 }
 
 function theme_js(){
