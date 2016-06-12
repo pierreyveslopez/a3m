@@ -43,3 +43,8 @@ ul.children>li.page_item>a{
 	text-transform: capitalize;
 	padding:2px;
 }
+
+.pageContent.singleAdherent #informations strong,
+.pageContent.singleAdherent #commentaires strong{
+	color: #000 !important;
+}
