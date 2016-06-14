@@ -43,3 +43,8 @@ div.wpcf7#wpcf7-f233-p18-o1 input[type="submit"]{
 	text-transform: capitalize;
 	padding:2px;
 }
+
+.pageContent.singleAdherent #informations strong,
+.pageContent.singleAdherent #commentaires strong{
+	color: #000 !important;
+}
