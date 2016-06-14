@@ -87,6 +87,21 @@
           <div class="col">
             <div class="blc">
               <h2 class="angle pink">Manifestation<br/> et Agenda</h2>
+              
+              <?php query_posts('post_type=post&cat=195&orderby=date&order=DESC'); ?>
+              <?php
+                 while ( have_posts() ) : the_post();
+                 $eventDate = get_field('date');
+              ?>
+                <article>
+                <h3><span class="date"><?php echo $eventDate; ?></span>
+                <?php the_title(); ?></h3>
+                </article>
+              <?php
+                endwhile; wp_reset_query();
+              ?>
+
+            </div>
             </div>
           </div>
         </div>
