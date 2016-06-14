@@ -27,7 +27,7 @@ div.wpcf7#wpcf7-f233-p18-o1 input[type="submit"]{
 }
 
 
-li.page_item>a{
+#mainContent li.page_item>a{
 	font-size: 1.7rem;
 	font-weight: bold;
 	color: #0ba5a3;
@@ -36,7 +36,7 @@ li.page_item>a{
 	padding: 10px;
 	display: block;
 }
-ul.children>li.page_item>a{
+#mainContent ul.children>li.page_item>a{
 	font-size: 1.5rem;
 	font-weight: lighter;
 	color: #484848;
