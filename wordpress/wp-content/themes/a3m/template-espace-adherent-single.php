@@ -1,6 +1,6 @@
 <?php
 /**
- *  Template Name: Espace adhérents - Content
+ *  Template Name: Espace adhérents - Single page
  */
 ?>
 <!DOCTYPE html>
@@ -50,8 +50,9 @@
 			</div>
 		</div>
       <div class="pageContent">
-        <div class="col3--espaceAdherents">
-          <h2 class="titlePAge"><?php the_title(); ?></h2>
+        <div class="col3--espaceAdherents singlePage">
+          <?php echo get_the_post_thumbnail( $page->ID, 'large' ); ?>
+          <h2 class="angle lightblue"><?php the_title(); ?></h2>
           <?php the_content(); ?>
         </div>
       </div>

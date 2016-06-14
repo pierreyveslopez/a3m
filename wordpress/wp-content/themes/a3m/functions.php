@@ -151,7 +151,7 @@ function private_page() {
     global $post;
     $absoluteUrl = "$_SERVER[REQUEST_URI]";
     $notSecurePage = strpos($absoluteUrl, 'espace-adherents');
-	if ( (is_page(159) OR $post->post_parent == '159' OR $notSecurePage !== FALSE) && ! is_user_logged_in() ) {
+	if ( (is_page(159) OR $post->post_parent == '159' OR $notSecurePage !== FALSE OR in_category( 'espace-adherents' )) && ! is_user_logged_in() ) {
 		wp_redirect( wp_login_url(get_permalink(159)) );
 		exit();
 	}
