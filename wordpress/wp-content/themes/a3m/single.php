@@ -11,7 +11,7 @@
         <div class="pure-u-1 pure-u-md-1-1 l-box hp-actu">
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <h2 class="titlePAge"><?php the_title(); ?></h2>
-            <?php the_content(); ?>
+            <p><?php the_content(); ?></p>
           <?php endwhile; endif; wp_reset_query(); ?>
         </div>
       </div>

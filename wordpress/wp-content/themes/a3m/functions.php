@@ -56,8 +56,8 @@ function sidebar_menu($origin){
 			$classLi = "";
 		}
 		echo '<li '.$classLi.'><a href="'.get_permalink($origin).'">Accueil</a></li>';
-
 	}
+
     while ( have_posts() ) : the_post();
     	if($actualPost == $post->ID){
 		$classLi = "class='actif'";
@@ -151,7 +151,7 @@ function private_page() {
     global $post;
     $absoluteUrl = "$_SERVER[REQUEST_URI]";
     $notSecurePage = strpos($absoluteUrl, 'espace-adherents');
-	if ( (is_page(159) OR $post->post_parent == '159' OR $notSecurePage !== FALSE OR in_category( 'espace-adherents' )) && ! is_user_logged_in() ) {
+	if ( (is_page(159) OR $post->post_parent == '159' OR $post->post_parent == '443' OR $post->post_type == 'newsletter' OR $notSecurePage !== FALSE OR in_category( 'espace-adherents' )) && ! is_user_logged_in() ) {
 		wp_redirect( wp_login_url(get_permalink(159)) );
 		exit();
 	}
@@ -226,4 +226,13 @@ register_taxonomy_for_object_type( 'type', 'adherents' );
 register_taxonomy_for_object_type( 'matieres', 'adherents' );
 register_taxonomy_for_object_type( 'produit', 'adherents' );
 
+function get_post_excerpt_by_id( $post_id ) {
+    global $post;
+    $post = get_post( $post_id );
+    setup_postdata( $post );
+    $the_excerpt = get_the_excerpt();
+    wp_reset_postdata();
+    return $the_excerpt;
+}
 
+?>
