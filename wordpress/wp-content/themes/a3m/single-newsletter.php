@@ -1,6 +1,6 @@
 <?php
 /**
- *  Template Name: Espace adhérents
+ *  Template Name: Newsletter - Single page
  */
 ?>
 <!DOCTYPE html>
@@ -41,6 +41,9 @@
         </div>
       </div>
       <h1>Espace Adhérents</h1>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <p class="subtitle">A3M ACTU - <?php the_title(); ?></p>
+      <?php endwhile; endif; wp_reset_query(); ?>
     </header>
 
     <div id="mainContent">
@@ -61,62 +64,45 @@
 
       <div class="pageContent">
         <div class="col3--espaceAdherents">
-          <div class="col">
 
-              <?php
-                function random($max){
-                  $random = rand(1, $max);
-                  $bgClass = "randomClass".$random;
-                  return $bgClass;
-                }
-              ?>
-
-              <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+          <?php
+            //Ramdom colors for articles elements
+            function random($max){
+              $random = rand(1, $max);
+              $bgClass = "randomClass".$random;
+              return $bgClass;
+            }
+          ?>
+        
+          <?php 
+            if ( have_posts() ) : while ( have_posts() ) : the_post();
               $articles = get_field('articles_relatifs');
+              $nbarticles = count($articles); 
+              $test = ceil($nbarticles/2); ?>
 
-              for($i = 0; $i < count($articles); $i++){ ?>
-                <div class="blc">
-                  <?php echo get_the_post_thumbnail( $articles[$i], 'medium' ); ?>
-                  <h2 class="angle <?php echo random(4); ?>"><?php echo get_the_title( $articles[$i] ); ?></h2>
-                  <p><?php echo get_post_excerpt_by_id($articles[$i]); ?></p>
-                  <a href="<?php echo get_the_permalink($articles[$i]); ?>" class="btn">Voir plus  --></a>
-                </div>
-              <?php } ?>
-              <?php endwhile; endif; wp_reset_query(); ?>
-            
-            
-            
-          </div>
-          <div class="col">
-            <div class="blc">
-               <?php 
-              $the_query = new WP_Query( array( 'page_id' => 169 )  );
-              while ( $the_query->have_posts() ) : $the_query->the_post();
-              ?>
-                <?php echo get_the_post_thumbnail( $page->ID, 'medium' ); ?>
-                <h2 class="angle lightgreen"><?php the_title(); ?></h2>
-                <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>" class="btn">Voir plus  --></a>
-
-              <?php
-                endwhile; wp_reset_query();
-              ?>         
-            </div>
-            <div class="blc">
               <?php 
-              $the_query = new WP_Query( array( 'page_id' => 173 )  );
-              while ( $the_query->have_posts() ) : $the_query->the_post();
-              ?>
-                <?php echo get_the_post_thumbnail( $page->ID, 'medium' ); ?>
-                <h2 class="angle"><?php the_title(); ?></h2>
-                <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>" class="btn">Voir plus  --></a>
+                for($i = 0; $i < $nbarticles; $i++){
 
-              <?php
-                endwhile; wp_reset_query();
-              ?>         
-            </div>
-          </div>
+                  if( $i == 0 || $i == $test || $i == $test*2 ){
+                    echo '<div class="col">';
+                  } 
+              ?>
+                  <div class="blc">
+                    <?php echo get_the_post_thumbnail( $articles[$i], 'medium' ); ?>
+                    <h2 class="angle <?php echo random(4); ?>"><?php echo get_the_title( $articles[$i] ); ?></h2>
+                    <p><?php echo get_post_excerpt_by_id($articles[$i]); ?></p>
+                    <a href="<?php echo get_the_permalink($articles[$i]); ?>" class="btn">Voir plus  --></a>
+                  </div>
+                  <?php 
+
+                  if( $i == ($test-1) || $i == ($test*2-1) || $i == ($nbarticles-1) ){
+                    echo '</div>';
+                  }
+                }
+
+            endwhile; endif; wp_reset_query(); 
+          ?>
+
           <div class="col">
             <div class="blc">
               <h2 class="angle pink">Manifestation<br/> et Agenda</h2>
@@ -136,10 +122,31 @@
               ?>
 
             </div>
-            </div>
+
+            <a href="<?php echo site_url(); ?>/archives-des-newsletters/" class="btn btn2">
+              <span>ARCHIVES</span>
+              <img src="<?php bloginfo(template_url); ?>/img/archives.png">
+            </a>
+
+            <?php 
+              if ( have_posts() ) : while ( have_posts() ) : the_post();
+              $pdfile = get_field('newsletter_pdf');
+              if($pdfile){ ?>
+                <a href="<?php echo $pdfile; ?>" class="btn btn2">
+                  <span>TÉLÉCHARGER A3M<br> ACTU EN PDF</span>
+                  <img src="<?php bloginfo(template_url); ?>/img/download.png">
+                </a>
+            <?php } ?>
+                
+            <?php
+              endwhile; endif; wp_reset_query();
+            ?>
+
           </div>
+
         </div>
       </div>
     </div>
   </div>
-  <?php get_footer();?>
+</div>
+<?php get_footer();?>
